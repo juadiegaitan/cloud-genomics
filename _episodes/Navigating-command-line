@@ -27,8 +27,9 @@ keypoints:
   -   View tab > turn on "Show hidden files, folders, and drives", turn off "Hide extensions for known file types"
   ![WE.settings4.jpg]()
   -   You still will have the newish "Libraries" folders at the top of your navigation panel, but scroll down and you will have the true hiericical folders
-  -   If your current mental map of file location is based only in the "Libraries" format, you'll need to find the real path
-  
+  -   If your current mental map of file location is based only in the "Libraries" format, you'll need to find the real path. Find the file/folder you are looking for, right click, "Properties"
+  ![WE.settings5.jpg]()
+-   Windows 10 ##need to find a Win10 machine and add this info
 
 
 CODE EXAMPLE
