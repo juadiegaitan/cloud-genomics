@@ -1,0 +1,61 @@
+---
+title: "Introduction to file structure and navigation using command line"
+teaching: 0
+exercises: 0
+questions:
+- "Key question"
+objectives:
+- "You will develop a simplified mental map of file structure"
+keypoints:
+- "First key point."
+---
+
+### How are files organized on your computer?
+-   Think about what you do to find a file on your computer.
+-   Tools
+    -   GUI Finder (Mac), Windows Explorer (Windows)
+    -   Finder displays hierical (tree) structure, newer Windows Explorer hides this structure
+### Aside to change Windows Explorer settings so you can see the hierical structure
+-   Windows 7
+  -   Open Windows Explorer
+  -   Organize > Layout > check next to "Menu bar" and "Navigation Pane"
+  ![WE.settings.jpb}()
+  -   Organize > Folder and search options
+  ![WE.settings2.jpg]()
+  - 
+  ![WE.settings3.jpg]()
+  -   View tab > turn on "Show hidden files, folders, and drives", turn off "Hide extensions for known file types"
+  ![WE.settings4.jpg]()
+  -   You still will have the newish "Libraries" folders at the top of your navigation panel, but scroll down and you will have the true hiericical folders
+  -   If your current mental map of file location is based only in the "Libraries" format, you'll need to find the real path
+  
+
+
+CODE EXAMPLE
+<!-- -->
+
+    ssh account@datacarpentry.host
+    df -h
+
+    wget http://www.hpa-bioinformatics.org.uk/lgp/resource/Sample280.fastq.gz
+    ls -lah Sample280.fastq.gz
+
+    gunzip Sample280.fastq.gz
+    ls -lah Sample280.fastq
+
+The output on iPlant Atmosphere:
+
+    --2015-03-25 09:40:33--  http://www.hpa-bioinformatics.org.uk/lgp/resource/Sample280.fastq.gz
+    Resolving www.hpa-bioinformatics.org.uk... 194.74.226.185
+    Connecting to www.hpa-bioinformatics.org.uk|194.74.226.185|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 215949113 (206M) [application/x-gzip]
+    Saving to: \u201cSample280.fastq.gz\u201d
+
+    100%[==========================================================================================>] 215,949,113  213K/s   in 16m 48s 
+
+    2015-03-25 09:57:21 (209 KB/s) - \u201cSample280.fastq.gz\u201d saved [215949113/215949113]
+
+    -rw-r--r-- 1 dnasubway01 iplant-everyone 206M Jun 29  2011 Sample280.fastq.gz
+
+    -rw-r--r-- 1 dnasubway01 iplant-everyone 627M Jun 29  2011 Sample280.fastq
